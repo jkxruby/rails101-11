@@ -15,7 +15,11 @@
     <tr>
       <td>#</td>
       <td><%= link_to(group.title, group_path(group)) %></td>
-      <td><%= link_to group.description %></td>
+      <td><%=  group.description %></td>
+      <td>
+        <%= link_to("Edit", edit_group_path(group), class: "btn btn-primary btn-xs")%>
+        <%= link_to("Delete", group_path(group), class:"btn btn-primary btn-xs", method: :delete, data: {confirm: "are you sure?" }) %>
+      </td>
     </tr>
   </tbody>
  <% end %>
