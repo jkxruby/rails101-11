@@ -19,7 +19,7 @@
         <td><%= post.updated_at%></td>
         <td>
         <%= link_to("Edit", edit_group_post_path(post.group, post), class: "btn btn-primary btn-xs")%>
-        <%= link_to("Delete", group_post_path(post.group, post), method: :delete, class: "btn btn-primary btn-xs") %>
+        <%= link_to("Delete", group_post_path(post.group, post), method: :delete, class: "btn btn-primary btn-xs", data:{confirm: "are you sure?"}) %>
         </td>
       </tr>
       <% end %>
